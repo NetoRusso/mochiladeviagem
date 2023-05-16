@@ -24,11 +24,11 @@ form.addEventListener('submit', (evento) => {
 
     const quantidadeFinal = parseInt(quantidade.value);
 
-    if (quantidadeFinal <= 0) {
-      console.log('A quantidade não pode ser negativa');
-      return;
+    if (quantidadeFinal <= 0 || isNaN(quantidadeFinal)) {
+        console.log('A quantidade não pode ser negativa ou vazia');
+        return;
     }
-
+    
     const existe = itens.find(e => e.nome === nomeFinal)
 
     const itemAtual = {
