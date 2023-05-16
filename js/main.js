@@ -24,7 +24,7 @@ form.addEventListener('submit', (evento) => {
 
     const quantidadeFinal = parseInt(quantidade.value);
 
-    if (quantidadeFinal < 0) {
+    if (quantidadeFinal <= 0) {
       console.log('A quantidade não pode ser negativa');
       return;
     }
